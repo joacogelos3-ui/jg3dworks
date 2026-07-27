@@ -1,0 +1,34 @@
+JG3D WORKS - WEB ESTÁTICA
+==========================
+
+Este paquete contiene la página completa en HTML, CSS y JavaScript.
+No necesita Node.js, React, base de datos ni proceso de compilación.
+
+ARCHIVOS PRINCIPALES
+- index.html: página principal.
+- styles.css: diseño adaptable a escritorio y celular.
+- i18n.js: traducciones y selector EN / ES / PT.
+- script.js: menú móvil y preguntas frecuentes desplegables.
+- favicon.svg: icono de la pestaña.
+- assets/: imágenes y logos.
+- fonts/: tipografías utilizadas por la web.
+
+CÓMO PROBARLA
+Abrí index.html en el navegador. Para una prueba idéntica al hosting, también
+podés servir la carpeta con cualquier servidor web local.
+
+El idioma inicial es inglés. El selector EN / ES / PT funciona también al abrir
+index.html directamente, sin conexión y sin instalar programas adicionales.
+
+CÓMO SUBIRLA
+1. Descomprimí el archivo ZIP.
+2. Subí TODO el contenido de la carpeta al directorio público del hosting
+   (normalmente public_html, www o htdocs).
+3. index.html debe quedar directamente en ese directorio público.
+4. Vinculá el dominio desde el panel del hosting.
+
+IMPORTANTE
+- No cambies los nombres ni la ubicación de assets, fonts, styles.css, i18n.js o script.js.
+- El botón de WhatsApp apunta a +54 9 351 788-7769.
+- El enlace de Instagram apunta a JG3D.works.
+- La web no procesa pagos ni almacena datos de usuarios.
