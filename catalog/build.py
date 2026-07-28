@@ -18,6 +18,19 @@ import json, os, sys, unicodedata
 from collections import Counter
 from PIL import Image, ImageSequence, ImageFilter, ImageEnhance
 
+def non_latin(s):
+    """Detecta alfabetos no latinos (cirílico, CJK, etc.). Cults3D a veces sirve el
+    título auto-traducido durante el scrape; esos nombres hay que corregirlos en el
+    catalog.json fuente (título original del autor = primera línea de la descripción,
+    o el og:title de la página /en/ o /es/)."""
+    bad = set()
+    for ch in s:
+        if ch.isalpha():
+            name = unicodedata.name(ch, '')
+            if not any(k in name for k in ('LATIN', 'DIGIT')):
+                bad.add(name.split(' ')[0])
+    return bad
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_IMG = os.path.join(REPO, 'catalog', 'img')
 OUT_JS = os.path.join(REPO, 'catalog', 'data.js')
@@ -34,10 +47,12 @@ BRANDS = [
     ('SEADOO', ['seadoo']), ('JOHNSON EVINRUDE', ['johnson', 'evinrude']), ('YAMAHA', ['yamaha']), ('VULCANO', ['vulcano']),
 ]
 VEH = [
-    ('CHEVETTE', ['chevette']), ('VW GOL', ['gol g1', 'gol g2', 'gol g3', 'gol quadrado', 'vw gol', ' gol ']),
+    # VW GOLF va ANTES que VW GOL: 'vw gol' es prefijo de 'vw golf' y robaría el match
+    ('CHEVETTE', ['chevette']), ('VW GOLF', ['golf', ' bora', 'jetta']),
+    ('VW GOL', ['gol g1', 'gol g2', 'gol g3', 'gol g4', 'gol quadrado', 'gol tubarao', ' gol ']),
     ('VW SAVEIRO', ['saveiro']), ('FORD ESCORT', ['escort']), ('FORD FIESTA', ['fiesta']), ('FORD MUSTANG', ['mustang']),
     ('CORSA', ['corsa']), ('ABARTH 500/595', ['abarth']), ('FORD MAVERICK', ['maverick']), ('ZETEC ROCAM', ['zetec', 'rocam']),
-    ('GOLF MK4 / BORA', ['golf mk4', 'bora']), ('CIVIC EP3', ['civic']), ('GRAND CHEROKEE', ['cherokee']),
+    ('CIVIC', ['civic']), ('GRAND CHEROKEE', ['cherokee']),
     ('CITROEN C4 / P307', ['citroen', 'c4 picasso', '307']), ('KIA / HYUNDAI', ['sportage', 'kia ', 'hyundai']),
 ]
 
@@ -94,6 +109,9 @@ def main():
     out, missing = [], []
     for m in catalog:
         slug = m['slug']
+        scripts = non_latin(m['name'])
+        if scripts:
+            print(f"⚠ NOMBRE NO LATINO ({'/'.join(sorted(scripts))}) en {slug!r}: {m['name']!r} — corregir en catalog.json")
         t = ' ' + norm(m['name'] + ' ' + slug) + ' '
         img_name = slug[:80] + '.webp'
         srcimg = cover_for(media, slug, dirs)
