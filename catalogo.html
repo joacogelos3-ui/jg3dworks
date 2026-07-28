@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Full catalog of JG3D automotive 3D designs: mounts, panels and connectors. STL files sold on Cults3D.">
+  <meta name="theme-color" content="#f3f1ec">
+  <title>JG3D Works | Catálogo</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="catalog/catalog.css">
+  <script src="i18n.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="catalog/data.js" defer></script>
+  <script src="catalog/catalog.js" defer></script>
+</head>
+<body>
+  <main>
+    <nav class="nav shell" aria-label="Navegación principal">
+      <a class="brand brand-logo" href="index.html" aria-label="JG3D inicio"><img src="assets/jg3d-logo.png" alt="JG3D"></a>
+      <div class="navlinks">
+        <a href="catalogo.html" class="nav-current">Catálogo</a><a href="index.html#productos">Diseños</a><a href="index.html#proceso">Cómo funciona</a><a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <div class="language-selector" role="group" aria-label="Language selector">
+          <button type="button" data-language="en" aria-label="English">EN</button>
+          <button type="button" data-language="es" aria-label="Español">ES</button>
+          <button type="button" data-language="pt" aria-label="Português">PT</button>
+        </div>
+        <a class="button compact" href="#contacto">Pedir diseño <span class="arrow-symbol" aria-hidden="true"><span class="arrow-desktop">»</span><span class="arrow-mobile">↗</span></span></a>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-label">MENÚ</span><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+      <div class="mobile-menu-panel" id="mobile-menu">
+        <div class="language-selector language-selector-mobile" role="group" aria-label="Language selector">
+          <button type="button" data-language="en" aria-label="English">EN</button>
+          <button type="button" data-language="es" aria-label="Español">ES</button>
+          <button type="button" data-language="pt" aria-label="Português">PT</button>
+        </div>
+        <a href="catalogo.html">Catálogo <span class="mobile-menu-chevron" aria-hidden="true">»</span></a>
+        <a href="index.html#productos">Diseños <span class="mobile-menu-chevron" aria-hidden="true">»</span></a>
+        <a href="index.html#proceso">Cómo funciona <span class="mobile-menu-chevron" aria-hidden="true">»</span></a>
+        <a href="index.html#faq">Preguntas frecuentes <span class="mobile-menu-chevron" aria-hidden="true">»</span></a>
+        <a class="mobile-menu-whatsapp" href="https://wa.me/5493517887769?text=Hola%20JG3D%2C%20quiero%20consultar%20por%20un%20modelo%20personalizado" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.8l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.4-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.1-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.1 31.5 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </nav>
+
+    <section class="cat-section shell" id="catalogo">
+      <div class="cat-head">
+        <div>
+          <div class="eyebrow cat-eyebrow"><i></i> <span id="cat-eyebrow-text">CATÁLOGO COMPLETO</span></div>
+          <h2 id="cat-title">102 diseños.<br>Listos para imprimir.</h2>
+        </div>
+        <p id="cat-intro">Todos los modelos publicados en Cults3D. Compralos ahí y descargá el archivo al instante.</p>
+      </div>
+
+      <div class="cat-toolbar">
+        <label class="cat-search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg>
+          <input id="cat-search" type="search" placeholder="Buscá por equipo, auto o pieza (ej: FT450 Gol)" aria-label="Buscar en el catálogo">
+        </label>
+        <div class="cat-sort"><span id="cat-sort-label">ORDENAR</span>
+          <select id="cat-sort" aria-label="Ordenar catálogo">
+            <option value="recent">MÁS RECIENTES</option>
+            <option value="price-asc">PRECIO ↑</option>
+            <option value="price-desc">PRECIO ↓</option>
+            <option value="name">A–Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="cat-chips" id="cat-chips" role="group" aria-label="Filtros rápidos"></div>
+
+      <p class="cat-count" id="cat-count"></p>
+      <div class="cat-grid" id="cat-grid"></div>
+
+      <div class="cat-empty" id="cat-empty" hidden>
+        <svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="4"/><path d="M9 1v4M9 13v4M1 9h4M13 9h4"/></svg>
+        <h3 id="cat-empty-title"></h3>
+        <p id="cat-empty-text"></p>
+        <div class="cat-empty-row">
+          <a class="button" id="cat-empty-cta" href="#" target="_blank" rel="noreferrer">PEDIR DISEÑO PERSONALIZADO <span class="arrow-desktop" aria-hidden="true">»</span><span class="arrow-mobile" aria-hidden="true">↗</span></a>
+          <a class="text-link cat-clear" id="cat-empty-clear" href="#">Limpiar búsqueda <b aria-hidden="true">→</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact shell" id="contacto">
+      <div class="contact-copy"><div class="eyebrow"><i></i> DESARROLLOS PERSONALIZADOS</div><h2>¿No encontraste<br>lo que buscabas?</h2><p>Contanos qué vehículo, pantalla o componente necesitás integrar. Podemos adaptar un diseño o crear uno desde cero.</p></div>
+      <div class="contact-actions">
+        <a class="button light-button whatsapp-button" href="https://wa.me/5493517887769?text=Hola%20JG3D%2C%20quiero%20consultar%20por%20un%20modelo%20personalizado" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.8l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.4-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.1-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.1 31.5 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+          <span>Consultar por WhatsApp</span><span class="arrow-symbol" aria-hidden="true"><span class="arrow-desktop">»</span><span class="arrow-mobile">↗</span></span>
+        </a>
+        <span>Modelos personalizados · Atención directa</span><span>Archivos digitales · Entrega global</span>
+      </div>
+    </section>
+
+    <footer class="footer shell">
+      <a class="brand brand-logo footer-logo" href="index.html"><img src="assets/jg3d-logo.png" alt="JG3D"></a>
+      <p>Automotive 3D Parts · STL files only</p>
+      <div class="footer-social">
+        <a class="instagram-link" href="https://instagram.com/JG3D.works" target="_blank" rel="noreferrer" aria-label="Abrir JG3D.works en Instagram"><svg class="instagram-icon" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1S3.3 127.5 1.5 163.4c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><span>JG3D.works</span></a>
+        <span class="country"><svg class="argentina-flag" viewBox="0 0 30 20" role="img" aria-label="Bandera de Argentina"><rect width="30" height="20" rx="1.5" fill="#74ACDF"></rect><rect y="6.67" width="30" height="6.66" fill="#fff"></rect><circle cx="15" cy="10" r="2.1" fill="#F6B40E"></circle></svg>Argentina</span>
+      </div>
+    </footer>
+  </main>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a5f9734fbe1311d44c8bfa2/1ju2md9vf';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

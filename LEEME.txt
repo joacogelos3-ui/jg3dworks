@@ -6,7 +6,13 @@ No necesita Node.js, React, base de datos ni proceso de compilación.
 
 ARCHIVOS PRINCIPALES
 - index.html: página principal.
+- catalogo.html: catálogo completo (102 diseños de Cults3D) con búsqueda y filtros.
 - styles.css: diseño adaptable a escritorio y celular.
+- catalog/catalog.css + catalog/catalog.js: estilos y lógica del catálogo.
+- catalog/data.js: datos de los productos (generado, no editar a mano).
+- catalog/img/: portadas optimizadas en WebP (~2 MB en total).
+- catalog/build.py: regenera data.js e img/ desde el scrape de Cults3D
+  (correr cuando se publican modelos nuevos: python3 catalog/build.py /ruta/al/scrape).
 - i18n.js: traducciones y selector EN / ES / PT.
 - script.js: menú móvil y preguntas frecuentes desplegables.
 - favicon.svg: icono de la pestaña.
