@@ -16,7 +16,7 @@ Correr cada vez que Joaco publica modelos nuevos; commitear img/ + data.js.
 """
 import json, os, sys, unicodedata
 from collections import Counter
-from PIL import Image, ImageSequence, ImageFilter, ImageEnhance
+from PIL import Image, ImageSequence, ImageFilter, ImageEnhance, ImageStat
 
 def non_latin(s):
     """Detecta alfabetos no latinos (cirílico, CJK, etc.). Cults3D a veces sirve el
@@ -71,6 +71,21 @@ def typ_of(t):
         return 'PANELES · CONSOLAS'
     return 'SOPORTES'
 
+def best_gif_frame(im):
+    """Frame representativo de un GIF: varios arrancan con fade desde negro, así que
+    el frame 1 puede salir vacío y hay caídas entre escenas. Se toma el frame cuyo
+    brillo queda más cerca de la mediana de brillos (cae en la meseta estable de la
+    animación, nunca en un fade ni en un flash)."""
+    frames = []
+    for i, fr in enumerate(ImageSequence.Iterator(im)):
+        rgba = fr.convert('RGBA')
+        probe = rgba.convert('L').resize((32, 32))
+        frames.append((i, ImageStat.Stat(probe).mean[0], rgba))
+    ok = [f for f in frames if 25 <= f[1] <= 235] or frames
+    med = sorted(f[1] for f in ok)[len(ok) // 2]
+    pick = min(ok, key=lambda f: abs(f[1] - med))
+    return pick[2]
+
 def to_square(im, size):
     """Portada cuadrada sin barras negras: las casi-cuadradas se recortan al centro;
     las anchas/verticales se apoyan sobre un fondo de la misma foto difuminada y
@@ -118,7 +133,7 @@ def main():
         if srcimg:
             im = Image.open(srcimg)
             if srcimg.lower().endswith('.gif'):
-                im = next(ImageSequence.Iterator(im)).convert('RGBA')
+                im = best_gif_frame(im)
             else:
                 im = im.convert('RGBA')
             base = Image.new('RGBA', im.size, (21, 23, 25, 255))  # --img-dark
