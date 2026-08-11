@@ -17,7 +17,7 @@
       emptyText: "Try the equipment brand (FuelTech, Injepro, ECUMaster…) or the car model (Gol, Chevette…). If what you need doesn't exist yet, we can design it for you.",
       emptyCta: "REQUEST A CUSTOM DESIGN", emptyClear: "Clear search",
       whatsappMsg: "Hello JG3D, I would like to ask about a custom model",
-      types: { "SOPORTES": "MOUNTS", "PANELES · CONSOLAS": "PANELS · CONSOLES", "CONECTORES": "CONNECTORS", "REPUESTOS": "SPARE PARTS", "TALLER · HOGAR": "SHOP · HOME", "EXTERIOR": "EXTERIOR" }
+      types: { "SOPORTES": "MOUNTS", "PANELES · CONSOLAS": "PANELS · CONSOLES", "CONECTORES": "CONNECTORS", "REPUESTOS": "SPARE PARTS", "TALLER · HOGAR": "SHOP · HOME", "HERRAMIENTAS": "TOOLS", "EXTERIOR": "EXTERIOR" }
     },
     es: {
       title: "JG3D Works | Catálogo",
@@ -36,7 +36,7 @@
       emptyText: "Probá con la marca del equipo (FuelTech, Injepro, ECUMaster…) o el modelo del auto (Gol, Chevette…). Si lo que buscás no existe todavía, lo diseñamos a medida.",
       emptyCta: "PEDIR DISEÑO PERSONALIZADO", emptyClear: "Limpiar búsqueda",
       whatsappMsg: "Hola JG3D, quiero consultar por un modelo personalizado",
-      types: { "SOPORTES": "SOPORTES", "PANELES · CONSOLAS": "PANELES · CONSOLAS", "CONECTORES": "CONECTORES", "REPUESTOS": "REPUESTOS", "TALLER · HOGAR": "TALLER · HOGAR", "EXTERIOR": "EXTERIOR" }
+      types: { "SOPORTES": "SOPORTES", "PANELES · CONSOLAS": "PANELES · CONSOLAS", "CONECTORES": "CONECTORES", "REPUESTOS": "REPUESTOS", "TALLER · HOGAR": "TALLER · HOGAR", "HERRAMIENTAS": "HERRAMIENTAS", "EXTERIOR": "EXTERIOR" }
     },
     pt: {
       title: "JG3D Works | Catálogo",
@@ -55,7 +55,7 @@
       emptyText: "Tente a marca do equipamento (FuelTech, Injepro, ECUMaster…) ou o modelo do carro (Gol, Chevette…). Se o que você procura ainda não existe, criamos sob medida.",
       emptyCta: "PEDIR PROJETO PERSONALIZADO", emptyClear: "Limpar busca",
       whatsappMsg: "Olá JG3D, gostaria de consultar sobre um modelo personalizado",
-      types: { "SOPORTES": "SUPORTES", "PANELES · CONSOLAS": "PAINÉIS · CONSOLES", "CONECTORES": "CONECTORES", "REPUESTOS": "PEÇAS", "TALLER · HOGAR": "OFICINA · CASA", "EXTERIOR": "EXTERIOR" }
+      types: { "SOPORTES": "SUPORTES", "PANELES · CONSOLAS": "PAINÉIS · CONSOLES", "CONECTORES": "CONECTORES", "REPUESTOS": "PEÇAS", "TALLER · HOGAR": "OFICINA · CASA", "HERRAMIENTAS": "FERRAMENTAS", "EXTERIOR": "EXTERIOR" }
     }
   };
 
@@ -68,7 +68,7 @@
     { id: "VW GOL", match: p => p.v === "VW GOL" },
     { id: "CHEVETTE", match: p => p.v === "CHEVETTE" },
     { id: "spares", match: p => p.t === "REPUESTOS" },
-    { id: "shop", match: p => p.t === "TALLER · HOGAR" }
+    { id: "shop", match: p => p.t === "TALLER · HOGAR" || p.t === "HERRAMIENTAS" }
   ];
 
   const NEW_DAYS = 30;
