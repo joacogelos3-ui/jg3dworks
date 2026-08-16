@@ -71,7 +71,8 @@
     { id: "shop", match: p => p.t === "TALLER · HOGAR" || p.t === "HERRAMIENTAS" }
   ];
 
-  const NEW_DAYS = 30;
+  const NEW_LIMIT = 4;
+  const newestSlugs = new Set(CATALOG.slice().sort((a, b) => b.d.localeCompare(a.d)).slice(0, NEW_LIMIT).map(p => p.s));
   const state = { lang: "en", chip: "all", query: "", sort: "recent" };
   const $ = s => document.querySelector(s);
 
@@ -106,7 +107,7 @@
   }
 
   function isNew(p) {
-    return (Date.now() - new Date(p.d + "T00:00:00Z").getTime()) < NEW_DAYS * 864e5;
+    return newestSlugs.has(p.s);
   }
 
   function cardHTML(p) {
