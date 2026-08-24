@@ -53,7 +53,7 @@
     replaceLeadText(one(".nav-actions .button"), t.order);
     setText(".menu-label", t.menu);
     all(".mobile-menu-panel>a:not(.mobile-menu-whatsapp)").forEach((node, i) => replaceLeadText(node, t.mobileNav[i]));
-    all(".mobile-menu-whatsapp").forEach(node => { replaceMobileWhatsappText(node, t.whatsapp); node.href = `https://wa.me/5493517887769?text=${encodeURIComponent(t.message)}`; });
+    all(".mobile-menu-whatsapp").forEach(node => { replaceMobileWhatsappText(node, t.whatsapp); node.href = `https://wa.me/5493512147683?text=${encodeURIComponent(t.message)}`; });
     setEyebrow(".hero .eyebrow", t.heroEye, true);
     setHeading(".hero h1", t.hero, true);
     setText(".hero-copy>p", t.heroText);
@@ -77,7 +77,7 @@
     setHeading(".contact h2", t.contactTitle);
     setText(".contact-copy>p", t.contactText);
     setText(".whatsapp-button>span:not(.arrow-symbol)", t.whatsapp);
-    const whatsapp = one(".whatsapp-button"); if (whatsapp) whatsapp.href = `https://wa.me/5493517887769?text=${encodeURIComponent(t.message)}`;
+    const whatsapp = one(".whatsapp-button"); if (whatsapp) whatsapp.href = `https://wa.me/5493512147683?text=${encodeURIComponent(t.message)}`;
     const contactNotes = all(".contact-actions>span"); if (contactNotes[0]) contactNotes[0].textContent = t.direct; if (contactNotes[1]) contactNotes[1].textContent = t.global;
     setText(".footer>p", t.footer);
     all("[data-language]").forEach(button => { const active = button.dataset.language === language; button.classList.toggle("active", active); button.setAttribute("aria-pressed", String(active)); });

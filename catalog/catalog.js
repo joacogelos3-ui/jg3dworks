@@ -153,7 +153,7 @@
     $("#cat-sort-label").textContent = s.sortLabel;
     document.querySelectorAll("#cat-sort option").forEach(o => { o.textContent = s.sort[o.value]; });
     $("#cat-empty-cta").firstChild.textContent = s.emptyCta + " ";
-    $("#cat-empty-cta").href = `https://wa.me/5493517887769?text=${encodeURIComponent(s.whatsappMsg)}`;
+    $("#cat-empty-cta").href = `https://wa.me/5493512147683?text=${encodeURIComponent(s.whatsappMsg)}`;
     $("#cat-empty-clear").firstChild.textContent = s.emptyClear + " ";
   }
 
